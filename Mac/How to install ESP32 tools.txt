@@ -1,0 +1,10 @@
+Steps to configure ESP32 tools:Run the Install EPS32 tools.sh or follow the steps below:1)	Open a terminal window and cd it into a folder named esp you created2)	git clone --recursive https://github.com/epfl-mobots/esp-idf.git3)	Download xtensa-esp32-elf	https://dl.espressif.com/dl/xtensa-esp32-elf-osx-1.22.0-73-ge28a011-5.2.0.tar.gz4) 	Unzip and copy it to the esp folder in order to have a xtensa-esp32-elf folder
+5)	Copy the script Run ESP32 tools.sh located in /tools/ to the esp folderIn order to be able to launch the eps32 tools,
+pyserial for Python 2.x must be installed
+
+1)	Install pip for python 2.x
+	« sudo easy_install pip »
+2)	Install pyserial for python 2.x
+	« sudo pip install pyserial »Steps to compile an ESP32 project :1)	Open a terminal window and execute Run ESP32 Tools.sh script
+	You can also directly open the script by double clicking on it if you have
+	configured the Finder to open it with the terminal.app2)	Cd it into your ESP32 project folder3)	You can now use the usual commands to compile, flash, etc
