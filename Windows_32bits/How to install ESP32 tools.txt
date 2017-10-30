@@ -1,0 +1,23 @@
+Steps to configure ESP32 tools:
+
+0)	First Git must be installed -> https://git-scm.com/download/win
+
+Run the Install ESP32 tools.bat or follow the steps below :
+
+1)	Open a command prompt and cd it into a folder named esp you created
+2)	git clone --recursive https://github.com/epfl-mobots/esp-idf.git
+
+3)	Download mingw32
+	https://dl.espressif.com/dl/esp32_win32_msys2_environment_and_toolchain-20170918.zip
+4) 	Unzip into the esp folder in order to have a msys32 folder
+5)	Copy the script Configure ESP32 tools.bat located in \tools\ to the esp folder
+
+Next run the Configure ESP32 tools.bat file in order to set the path to the folder.
+You need to run it each time you move the esp folder somewhere else.
+
+
+Steps to compile an ESP32 project :
+
+1)	Open mingw32.exe terminal located in msys32 folder
+2)	Cd it into your ESP32 project folder
+3)	You can now use the usual commands to compile, flash, etc
