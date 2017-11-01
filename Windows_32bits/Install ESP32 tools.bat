@@ -21,14 +21,7 @@ echo to install esp folder and press [ENTER]
 
 set /p installation_dir=
 
-cd %installation_dir%
-
-mkdir esp
-if %errorlevel% neq 0 (
-pause
-exit
-)
-cd esp
+mkdir %installation_dir%\esp
 if %errorlevel% neq 0 (
 pause
 exit
@@ -37,7 +30,13 @@ exit
 echo.
 echo Downloading esp_idf
 
-git clone --recursive %esp_dif_url%
+mkdir %installation_dir%\esp\esp-idf
+if %errorlevel% neq 0 (
+pause
+exit
+)
+
+git clone --recursive %esp_dif_url% %installation_dir%\esp\esp-idf
 if %errorlevel% neq 0 (
 pause
 exit
@@ -56,19 +55,19 @@ echo esp toolchain downloaded
 
 echo.
 echo Uncompressing esp toolchain
-%current_dir%\tools\7za.exe x %mingw32_folder_name%
+%current_dir%\tools\7za.exe x %installation_dir%\esp\%mingw32_folder_name% -o%installation_dir%\esp
 if %errorlevel% neq 0 (
 pause
 exit
 )
-del %mingw32_folder_name%
+del %installation_dir%\esp\%mingw32_folder_name%
 if %errorlevel% neq 0 (
 pause
 exit
 )
 echo esp toolchain uncompressed
 
-xcopy %current_dir%\tools\"Configure ESP32 tools.bat"  /s /q
+xcopy %current_dir%\tools\"Configure ESP32 tools.bat" %installation_dir%\esp\ /s /q
 if %errorlevel% neq 0 (
 pause
 exit
