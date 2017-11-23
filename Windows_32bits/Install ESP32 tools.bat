@@ -1,6 +1,6 @@
 @echo off
 
-set esp_dif_url=https://github.com/epfl-mobots/esp-idf.git
+set esp_dif_url=https://github.com/e-puck2/esp-idf.git
 
 set mingw32_url=https://dl.espressif.com/dl/esp32_win32_msys2_environment_and_toolchain-20170918.zip
 for %%a in ("%mingw32_url%") do set "mingw32_folder_name=%%~nxa"
