@@ -1,6 +1,6 @@
 #!/bin/bash
 
-esp_dif_url=https://github.com/e-puck2/esp-idf.git
+esp_idf_url=https://github.com/e-puck2/esp-idf.git
 
 xtenza_url=https://dl.espressif.com/dl/xtensa-esp32-elf-osx-1.22.0-73-ge28a011-5.2.0.tar.gz
 xtenza_archive_name=`basename "$xtenza_url"`
@@ -38,7 +38,7 @@ fi
 echo
 echo Downloading esp_idf
 
-git clone --recursive $esp_dif_url
+git clone --recursive $esp_idf_url
 if [ $? -ne 0 ]; then
     exit
 fi
